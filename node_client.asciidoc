@@ -207,7 +207,7 @@ These basic docker commands will be enough to get you started and will allow you
 
 Most of the Lightning node implementations need access to a full Bitcoin node in order to work.
 
-Installing a full Bitcoin node and synching the Bitcoin blockchain is outside the scope of this book and is a relatively complex endeavor in itself. If you want to try it, refer to _Mastering Bitcoin_ (https://github.com/bitcoinbook/bitcoinbook), "Chapter 3: Bitcoin Core: The Reference Implementation" which discusses the installation and operation of a Bitcoin node.
+Installing a full Bitcoin node and syncing the Bitcoin blockchain is outside the scope of this book and is a relatively complex endeavor in itself. If you want to try it, refer to _Mastering Bitcoin_ (https://github.com/bitcoinbook/bitcoinbook), "Chapter 3: Bitcoin Core: The Reference Implementation" which discusses the installation and operation of a Bitcoin node.
 
 A Bitcoin node can be operated in _regtest_ mode, where the node creates a local simulated Bitcoin blockchain for testing purposes. In the following examples we will be using the +regtest+ mode to allow us to demonstrate Lightning without having to synchronize a Bitcoin node or risk any funds.
 
@@ -224,7 +224,7 @@ $ docker build -t lnbook/bitcoind bitcoind
 Sending build context to Docker daemon  12.29kB
 Step 1/25 : FROM ubuntu:20.04 AS bitcoind-base
  ---> c3c304cb4f22
-Step 2/25 : RUN apt update && apt install -yqq 	curl gosu jq bash-completion
+Step 2/25 : RUN apt update && apt install -yqq  curl gosu jq bash-completion
 
 [...]
 
@@ -338,7 +338,7 @@ $ docker build -t lnbook/c-lightning c-lightning
 Sending build context to Docker daemon  10.24kB
 Step 1/21 : FROM lnbook/bitcoind AS c-lightning-base
  ---> 758051998e72
-Step 2/21 : RUN apt update && apt install -yqq 	software-properties-common
+Step 2/21 : RUN apt update && apt install -yqq  software-properties-common
 
 [...]
 
@@ -778,10 +778,10 @@ $ docker build -t lnbook/eclair eclair
 Sending build context to Docker daemon  9.216kB
 Step 1/22 : FROM ubuntu:20.04 AS eclair-base
  ---> c3c304cb4f22
-Step 2/22 : RUN apt update && apt install -yqq 	curl gosu jq bash-completion
+Step 2/22 : RUN apt update && apt install -yqq  curl gosu jq bash-completion
  ---> Using cache
  ---> 3f020e1a2218
-Step 3/22 : RUN apt update && apt install -yqq 	openjdk-11-jdk unzip
+Step 3/22 : RUN apt update && apt install -yqq  openjdk-11-jdk unzip
  ---> Using cache
  ---> b068481603f0
 
